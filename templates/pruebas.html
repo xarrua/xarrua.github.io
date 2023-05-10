@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="login-form">
+    <label for="username">Usuario:</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="submit">Ingresar</button>
+  </form>
+  <script src="../static/js/login.js"></script>
+</body>
+</html>
+
+
+
+
+
+'''
+@app.route('/home', methods=['POST'])
+def admin_login_post():
+    _usuario=request.form['txtUdusario']
+    _password=request.form['txtPassword']
+    print(_usuario)
+    print(_password)
+
+    if _usuario=="admin" and _password=="123":
+        session["login"]=True
+        session["usuario"]="Administrador"
+        return redirect("/home")
+    
+    return render_template("/home.html", mensaje="Acceso denegado")
+@app.route('/admin/cerrar')
+def login_cerrar():
+    return redirect('login')
+#BD
+
+
+@app.route('/home/guardar',methods=['POST'])
+def home_guardar():
+
+    _nombre=request.form['txtNombre']
+    _url=request.form['txtURL']
+    _archivo=request.files['txtImagen']
+
+    sql="INSERT INTO `home` (`id`, `nombre`, `imagen`, `url`) VALUES (NULL, %s, %s, %s);"
+    datos=(_nombre,_archivo.filename,_url)
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute(sql)
+    conexion.commit()
+
+    print(_nombre)
+    print(_url)
+    print(_archivo)
+    return redirect('/home')
+
+    '''
+    '''
+    from flaskext.mysql import MySQL
+    
+    
+    mysql=MySQL()
+    
+    app.config['MYSQL_DATABSE_HOST']='localhost'
+    app.config['MYSQL_DATABSE_USER']='root'
+    app.config['MYSQL_DATABSE_PASSWORD']=''
+    app.config['MYSQL_DATABSE_DB']='sitio'
+    mysql.init_app(app)
+    
+    #paginas home
+    @app.route('/')
+    def home():
+        conexion=mysql.connect()
+        print(conexion)
+        return render_template('home.html')
+    '''

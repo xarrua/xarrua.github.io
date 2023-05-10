@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMC</title>
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+ 
+  <!--css-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"> 
+  <link rel="stylesheet" href="../static/css/main.css">
+</head>
+
+<body>
+  <nav class="navbar bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html"> <img src="../static/img/home.png" height="30" width="30">Valverde - Health & App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+          </li>       
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Servicios</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Medico</a>
+              <a class="dropdown-item" href="#">Fisioterapia</a>
+              <a class="dropdown-item" href="#">Psicologia</a>
+              <br>
+              <a class="dropdown-item" href="#">Software</a>
+              <a class="dropdown-item" href="#">Inmoviliario</a>
+              <a class="dropdown-item" href="#">Tango</a>
+            </div>
+          </li>   
+        
+          <li class="nav-item">
+            <a class="nav-link" href="./developer.html">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./calculador.html">prueba</a>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">Idiomas</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Español</a>
+              <a class="dropdown-item" href="#">Ingles</a>
+              <a class="dropdown-item" href="#">Alemán</a>
+              <a class="dropdown-item" href="#">Ruso</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./about.html">About</a>
+          </li>         
+        </ul>
+        <span class="navbar-text">
+          H & A
+        </span>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Indice de Masa Corporal</h1>  
+  
+    <h3>Calcula tu 
+    <button onclick= 'calcularIMC()'>IMC</button>
+    </h3>
+    <h3>Veamos a segun las tablas: <h3/>
+    <img src="../static/img/Calcula-tu-Peso-Ideal-y-IMC1.png" target="_blank" width="480" height="320">
+    <img src="../static/img/imc-obesidad.webp" target="_blank" width="347" height="345">
+    <img src="../static/img/imc-tabla-siluetas-1024x469.png" target="_blank"   width="981" height="449">
+    <script src="../static/js/IMC.js"></script>
+    </div>
+  <div class="footer">®2023 by XaRrUa Ltd. All Rights Reserved|  <img src="../static/img/steto.png" height="15" width="15"><img src="../static/img/notebook.png" height="15" width="15"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+

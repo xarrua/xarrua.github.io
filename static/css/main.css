@@ -1,0 +1,42 @@
+html,body {
+  margin: 0;
+  padding: 120;
+  background-color: rgb(49, 49, 49);
+  font-size: 14px;
+  padding-bottom: 20px;
+
+  
+}
+.header {
+  height: 100px;
+  background-color: rgb(30, 19, 183);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu li {
+   margin: 6px;
+  background-color: brown;
+}
+.menu li a {
+  background-color: aquamarine;
+  text-decoration: none;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(127, 197, 255);
+  width: 100%;
+  text-align: center;
+  height: 20px;
+}
+.container {
+  background-color: rgb(255, 255, 255);
+  width: 1200px;
+  border: 1px solid rgb(214, 213, 213);
+  min-height: 500px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
